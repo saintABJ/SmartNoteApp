@@ -15,7 +15,6 @@ public class NoteDatabase extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "notesdbx";
     private static final String DATABASE_TABLE = "notestablex";
-//    private static final String DATABASE_TABLE2 = "schoolnotetable";
 
 
     // columns name for database table
@@ -26,16 +25,6 @@ public class NoteDatabase extends SQLiteOpenHelper {
     private static final String KEY_TIME = "time";
 
 
-
-    //    columns name for database table2
-//    private static final String LECTURE_KEY_ID = "id";
-//    private static final String LECTURE_KEY_COURSE = "course";
-//    private static final String LECTURE_KEY_LECTURER = "lecturer";
-//    private static final String LECTURE_KEY_DEPT = "dept";
-//    private static final String LECTURE_KEY_LEVEL = "level";
-//    private static final String LECTURE_KEY_NOTE_DETAILS = "note details";
-//    private static final String LECTURE_KEY_DATE = "date";
-//    private static final String LECTURE_KEY_TIME = "time";
 
     NoteDatabase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -52,18 +41,9 @@ public class NoteDatabase extends SQLiteOpenHelper {
                 KEY_DATE + " TEXT," +
                 KEY_TIME + " TEXT" + ")";
 
-//        String querytable2 = "CREATE TABLE " + DATABASE_TABLE2 + "(" + LECTURE_KEY_ID + " INTEGER PRIMARY KEY," +
-//
-//                LECTURE_KEY_COURSE + " TEXT," +
-//                LECTURE_KEY_LECTURER + " TEXT," +
-//                LECTURE_KEY_DEPT + " TEXT," +
-//                LECTURE_KEY_LEVEL + " TEXT," +
-//                LECTURE_KEY_NOTE_DETAILS + "TEXT," +
-//                LECTURE_KEY_DATE + "TEXT," +
-//                LECTURE_KEY_TIME + "TEXT" + ")";
 
         db.execSQL(query);
-//        db.execSQL(querytable2);
+
 
     }
 
@@ -91,24 +71,6 @@ public class NoteDatabase extends SQLiteOpenHelper {
         Log.d("Inserted", "ID -> " + ID);
         return ID;
     }
-
-//    public long addSchoolNote(SchoolNote schoolNote) {
-//
-//        SQLiteDatabase dbs = this.getWritableDatabase();
-//        ContentValues c = new ContentValues();
-//
-//        c.put(LECTURE_KEY_TIME, schoolNote.getSchoolTime());
-//        c.put(LECTURE_KEY_DATE, schoolNote.getSchoolDate());
-//        c.put(LECTURE_KEY_LECTURER, schoolNote.getLecturer());
-//        c.put(LECTURE_KEY_COURSE, schoolNote.getCourse());
-//        c.put(LECTURE_KEY_LEVEL, schoolNote.getLevel());
-//        c.put(LECTURE_KEY_DEPT, schoolNote.getDepartment());
-//
-//        long ID = dbs.insert(DATABASE_TABLE2, null, c);
-//        Log.d("Inserted", "ID -> " + ID);
-//        return ID;
-//
-//    }
 
 
     public Note getNote(long id) {
