@@ -93,113 +93,14 @@ public class AddSchoolNote extends AppCompatActivity {
             Toast.makeText(this, "Note Not Saved", Toast.LENGTH_SHORT).show();
             onBackPressed();
 
-//             String id = UUID.randomUUID().toString();
-//             String schC = schCourse.getText().toString();
-//             String schL = schLecturer.getText().toString();
-//             String schD = schDept.getText().toString();
-//             String schLv = schLvl.getText().toString();
-//             String schND = schNoteDetails.getText().toString();
 
-//            try {
-//                myRealm.beginTransaction();
-//
-//                SchoolNote schoolNote = myRealm.createObject(SchoolNote.class, id);
-//                schoolNote.setCourse(schC);
-//                schoolNote.setLecturer(schL);
-//                schoolNote.setDepartment(schD);
-//                schoolNote.setLevel(schLv);
-//                schoolNote.setNoteDetails(schND);
-//
-//                myRealm.commitTransaction();
-//            } catch (Exception e) {
-//                myRealm.cancelTransaction();
-//            }
-
-//                myRealm.executeTransactionAsync(new Realm.Transaction() {
-//                    @Override
-//                    public void execute(Realm realm) {
-//                        SchoolNote schoolNote = myRealm.createObject(SchoolNote.class, id);
-//                        schoolNote.setCourse(schC);
-//                        schoolNote.setLecturer(schL);
-//                        schoolNote.setDepartment(schD);
-//                        schoolNote.setLevel(schLv);
-//                        schoolNote.setNoteDetails(schND);
-//
-//                    }
-//            }, new Realm.Transaction.OnSuccess() {
-//                    @Override
-//                    public void onSuccess() {
-//                        Toast.makeText(AddSchoolNote.this, "Added Successfully", Toast.LENGTH_SHORT).show();
-//                    }
-//                }, new Realm.Transaction.OnError() {
-//                    @Override
-//                    public void onError(Throwable error) {
-//                        Toast.makeText(AddSchoolNote.this, "Error Saving Note", Toast.LENGTH_SHORT).show();
-//                    }
-//            });
-
-//            try {
-//                realmAsyncTask = myRealm.executeTransactionAsync(new Realm.Transaction() {
-//                    @Override
-//                    public void execute(Realm realm) {
-//
-//                        SchoolNote schoolNote = myRealm.createObject(SchoolNote.class, id);
-//                        schoolNote.setCourse(schC);
-//                        schoolNote.setLecturer(schL);
-//                        schoolNote.setDepartment(schD);
-//                        schoolNote.setLevel(schLv);
-//                        schoolNote.setNoteDetails(schND);
-//
-//                    }
-//                }, new Realm.Transaction.OnSuccess() {
-//                    @Override
-//                    public void onSuccess() {
-//                        Toast.makeText(AddSchoolNote.this, "Added Successfully", Toast.LENGTH_SHORT).show();
-//                    }
-//                }, new Realm.Transaction.OnError() {
-//                    @Override
-//                    public void onError(Throwable error) {
-//                        Toast.makeText(AddSchoolNote.this, "Error Saving Note", Toast.LENGTH_SHORT).show();
-//                    }
-//                });
-//            } catch (Exception e) {
-//                myRealm.cancelTransaction();
-//            }
-//
-//            if (schC.isEmpty() == true || schL.isEmpty() == true || schD.isEmpty() == true || schLv.isEmpty() == true || schND.isEmpty() == true) {
-//
-//                Toast.makeText(getApplicationContext(), "All Fields Must Be Entered", Toast.LENGTH_SHORT).show();
-//
-//            }
             schCourse.setText(null);
             schLecturer.setText(null);
             schDept.setText(null);
             schLvl.setText(null);
             schNoteDetails.setText(null);
 
-//            Log.d("Inserted", "ID -> " + id);
-
-//            goToMain();
-
-
-//                SchoolNote schoolNote = new SchoolNote(schCourse.getText().toString(),
-//                        schLecturer.getText().toString(), schDept.getText().toString(),
-//                        schLvl.getText().toString(),todaysDate,currentTime);
-//
-//                NoteDatabase db = new NoteDatabase(this);
-//                db.addSchoolNote(schoolNote);
-
-//                Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show();
-//
-//
-//
-//            }else {
-//                Toast.makeText(this, "Note Not Saved", Toast.LENGTH_SHORT).show();
-//
-//            }
-
-
-//        return super.onOptionsItemSelected(item);
+ return super.onOptionsItemSelected(item);
         }
 
         return super.onOptionsItemSelected(item);

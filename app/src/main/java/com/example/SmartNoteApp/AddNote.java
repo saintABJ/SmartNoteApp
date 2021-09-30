@@ -83,7 +83,7 @@ public class AddNote extends AppCompatActivity {
                 Note note = new Note(noteTitle.getText().toString(),noteDetails.getText().toString(),todaysDate,currentTime);
                 NoteDatabase db = new NoteDatabase(this);
                 db.addNote(note);
-                
+
 
                 Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show();
 
